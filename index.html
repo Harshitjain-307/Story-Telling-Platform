@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TEAM ACE CODERS WORLD</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Animate.css for extra animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- Google Fonts: Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* OPTIONAL: Additional styling for the logo and image */
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo img {
+      width: 50px; /* Adjust the size as needed */
+      height: auto;
+      margin-right: 10px; /* Spacing between image and text */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Background Music (BGM) -->
+  <audio id="bg-music" src="audios/" autoplay loop></audio>
+
+  <!-- Navigation Bar with Search & Suggestions -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <!-- Logo Image Placed Before Text -->
+        <img src="../chat.html/images/icons/logo.jpg" alt="TEAM ACE CODERS Logo" />
+        TEAM ACE CODERS
+      </div>
+      <ul class="nav-links">
+        <li><a href="#main-stories">Main Stories</a></li>
+        <li><a href="#horror">Horror</a></li>
+        <li><a href="#thriller">Thriller</a></li>
+        <li><a href="#fantasy">Fantasy</a></li>
+      </ul>
+      <div class="nav-search">
+        <input type="text" id="searchInput" placeholder="Search stories..." list="suggestions" autocomplete="on" />
+        <datalist id="suggestions">
+          <option value="Haunted Manor">
+          <option value="Phantom Code">
+          <option value="Bug in the Matrix">
+          <option value="Cyber Shadows">
+          <option value="Infinite Loop">
+        </datalist>
+        <button id="searchBtn">Search</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section with Slideshow -->
+  <section class="hero">
+    <div class="slideshow-container">
+      <div class="slide fade">
+        <img src="https://images.unsplash.com/photo-1517602302552-471fe67acf66?auto=format&fit=crop&w=1600&q=80"
+          alt="Slide 1">
+        <div class="slide-text">Innovative Horror Tales</div>
+      </div>
+      <div class="slide fade">
+        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1600&q=80"
+          alt="Slide 2">
+        <div class="slide-text">Thrilling Cyber Mysteries</div>
+      </div>
+      <div class="slide fade">
+        <img src="https://images.unsplash.com/photo-1534081333815-ae5019106622?auto=format&fit=crop&w=1600&q=80"
+          alt="Slide 3">
+        <div class="slide-text">Futuristic Fantasy Adventures</div>
+      </div>
+    </div>
+    <div class="dot-container">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+  </section>
+
+  <!-- Main Stories Section -->
+  <section id="main-stories">
+    <h2 class="section-title animate__animated animate__fadeInLeft" style="margin: 0 20px;">Main Stories</h2>
+    <div class="main-stories-bg interactive-bg">
+      <div class="story-list main-stories-list">
+        <!-- The Phantom Code Story -->
+        <div class="story-card small animate__animated animate__zoomIn" data-title="The Phantom Code">
+          <a href="trending/story1.html">
+            <img src="../chat.html/images/story2/story2-1.jpg" alt="The Phantom Code">
+            <h3>The Phantom Code</h3>
+          </a>
+        </div>
+        <!-- Add other main stories here if needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Trending Stories Section with Interactive Background -->
+  <section id="trending">
+    <h2 class="section-title animate__animated animate__fadeInLeft" style="margin: 0 20px;">Trending Stories</h2>
+    <div class="trending-bg interactive-bg">
+      <div class="story-list trending-list">
+        <!-- Primary Trending Story Cards -->
+        <div class="story-card small animate__animated animate__zoomIn" data-title="The Phantom Code">
+          <a href="trending/story1.html">
+            <img src="../chat.html/images/story2/story2-1.jpg" alt="The Phantom Code">
+            <h3>The Phantom Code</h3>
+          </a>
+        </div>
+        <div class="story-card small animate__animated animate__zoomIn" data-title="Bug in the Matrix">
+          <a href="trending/story2.html">
+            <img src="https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=300&q=80"
+              alt="Bug in the Matrix">
+            <h3>Bug in the Matrix</h3>
+          </a>
+        </div>
+        <div class="story-card small animate__animated animate__zoomIn" data-title="The Last Compile">
+          <a href="trending/story3.html">
+            <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=300&q=80"
+              alt="The Last Compile">
+            <h3>The Last Compile</h3>
+          </a>
+        </div>
+        <div class="story-card small animate__animated animate__zoomIn" data-title="Infinite Loop of Doom">
+          <a href="trending/story4.html">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=300&q=80"
+              alt="Infinite Loop of Doom">
+            <h3>Infinite Loop of Doom</h3>
+          </a>
+        </div>
+        <div class="story-card small animate__animated animate__zoomIn" data-title="Zero Day: The Hack">
+          <a href="trending/story5.html">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=300&q=80"
+              alt="Zero Day: The Hack">
+            <h3>Zero Day: The Hack</h3>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest Stories Section with Similar Creative Background -->
+  <section id="latest">
+    <h2 class="section-title animate__animated animate__fadeInLeft" style="margin: 0 20px;">Latest Stories</h2>
+    <div class="trending-bg interactive-bg">
+      <div class="story-list latest-list">
+        <!-- Latest Story Card 1 -->
+        <div class="story-card small animate__animated animate__zoomIn" data-title="Digital Shadows">
+          <a href="latest/story1.html">
+            <img src="../chat.html/images/icons/icon3.webp" alt="Digital Shadows">
+            <h3>Digital Shadows</h3>
+          </a>
+        </div>
+        <!-- Latest Story Card 2 -->
+        <div class="story-card small animate__animated animate__zoomIn" data-title="Virtual Reality">
+          <a href="latest/story2.html">
+            <img src="../chat.html/images/icons/icon4.webp" alt="Virtual Reality">
+            <h3>Virtual Reality</h3>
+          </a>
+        </div>
+        <!-- Latest Story Card 3 -->
+        <div class="story-card small animate__animated animate__zoomIn" data-title="Code Breaker">
+          <a href="latest/story3.html">
+            <img src="../chat.html/images/icons/icon5.webp" alt="Code Breaker">
+            <h3>Code Breaker</h3>
+          </a>
+        </div>
+        <!-- Latest Story Card 4 -->
+        <div class="story-card small animate__animated animate__zoomIn" data-title="Quantum Leap">
+          <a href="latest/story4.html">
+            <img src="../chat.html/images/icons/icon6.webp" alt="Quantum Leap">
+            <h3>Quantum Leap</h3>
+          </a>
+        </div>
+        <!-- Latest Story Card 5 -->
+        <div class="story-card small animate__animated animate__zoomIn" data-title="Next Gen Hack">
+          <a href="latest/story5.html">
+            <img src="https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=300&q=80"
+              alt="Next Gen Hack">
+            <h3>Next Gen Hack</h3>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Primary Content Sections for Categories -->
+  <main class="container">
+    <!-- Horror Stories Section with Enhanced Creative Background -->
+    <section id="horror">
+      <h2 class="section-title animate__animated animate__fadeInLeft" style="margin: 0 20px;">Horror Stories</h2>
+      <div class="horror-bg">
+        <div class="story-list" id="horrorList">
+          <div class="story-card animate__animated animate__zoomIn" data-title="The Haunted Manor">
+            <a href="horror/story1.html">
+              <img src="https://images.unsplash.com/photo-1579546929518-9e396f3cc809?auto=format&fit=crop&w=400&q=80"
+                alt="The Haunted Manor">
+              <h3>The Haunted Manor</h3>
+            </a>
+          </div>
+          <div class="story-card animate__animated animate__zoomIn" data-title="Nightmare Alley">
+            <a href="horror/story2.html">
+              <img src="../chat.html/images/icons/nightmare alley.jpg" alt="Nightmare Alley">
+              <h3>Nightmare Alley</h3>
+            </a>
+          </div>
+          <div class="story-card animate__animated animate__zoomIn" data-title="Whispering Shadows">
+            <a href="horror/story3.html">
+              <img src="https://images.unsplash.com/photo-1519985176271-adb1088fa94c?auto=format&fit=crop&w=400&q=80"
+                alt="Whispering Shadows">
+              <h3>Whispering Shadows</h3>
+            </a>
+          </div>
+          <div class="story-card animate__animated animate__zoomIn" data-title="The Cursed Doll">
+            <a href="horror/story4.html">
+              <img src="../chat.html/images/icons/cursed doll.jpg" alt="The Cursed Doll">
+              <h3>The Cursed Doll</h3>
+            </a>
+          </div>
+          <div class="story-card animate__animated animate__zoomIn" data-title="Midnight Screams">
+            <a href="horror/story5.html">
+              <img src="../chat.html/images/icons/midnight screams.jpg" alt="Midnight Screams">
+              <h3>Midnight Screams</h3>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Thriller Stories Section -->
+    <section id="thriller">
+      <h2 class="section-title animate__animated animate__fadeInLeft" style="margin: 0 20px;">Thriller Stories</h2>
+      <div class="story-list" id="thrillerList">
+        <div class="story-card animate__animated animate__zoomIn" data-title="The Last Witness">
+          <a href="thriller/story1.html">
+            <img src="../chat.html/images/icons/last witness.jpg" alt="The Last Witness">
+            <h3>The Last Witness</h3>
+          </a>
+        </div>
+        <div class="story-card animate__animated animate__zoomIn" data-title="Shattered Truth">
+          <a href="thriller/story2.html">
+            <img src="../chat.html/images/icons/shattered truth.jpg" alt="Shattered Truth">
+            <h3>Shattered Truth</h3>
+          </a>
+        </div>
+        <div class="story-card animate__animated animate__zoomIn" data-title="Edge of Deception">
+          <a href="thriller/story3.html">
+            <img src="../chat.html/images/icons/edge of deception.jpg" alt="Edge of Deception">
+            <h3>Edge of Deception</h3>
+          </a>
+        </div>
+        <div class="story-card animate__animated animate__zoomIn" data-title="Silent Pursuit">
+          <a href="thriller/story4.html">
+            <img src="../chat.html/images/icons/silent pursuit.jpg" alt="Silent Pursuit">
+            <h3>Silent Pursuit</h3>
+          </a>
+        </div>
+        <div class="story-card animate__animated animate__zoomIn" data-title="Double Cross">
+          <a href="thriller/story5.html">
+            <img src="https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=400&q=80"
+              alt="Double Cross">
+            <h3>Double Cross</h3>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fantasy Stories Section -->
+    <section id="fantasy">
+      <h2 class="section-title animate__animated animate__fadeInLeft" style="margin: 0 20px;">Fantasy Stories</h2>
+      <div class="story-list" id="fantasyList">
+        <div class="story-card animate__animated animate__zoomIn" data-title="The Enchanted Forest">
+          <a href="fantasy/story1.html">
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=400&q=80"
+              alt="The Enchanted Forest">
+            <h3>The Enchanted Forest</h3>
+          </a>
+        </div>
+        <div class="story-card animate__animated animate__zoomIn" data-title="Dragon's Quest">
+          <a href="fantasy/story2.html">
+            <img src="../chat.html/images/icons/dragon.jpg" alt="Dragon's Quest">
+            <h3>Dragon's Quest</h3>
+          </a>
+        </div>
+        <div class="story-card animate__animated animate__zoomIn" data-title="Realm of Magic">
+          <a href="fantasy/story3.html">
+            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=400&q=80"
+              alt="Realm of Magic">
+            <h3>Realm of Magic</h3>
+          </a>
+        </div>
+        <div class="story-card animate__animated animate__zoomIn" data-title="The Lost Kingdom">
+          <a href="fantasy/story4.html">
+            <img src="../chat.html/images/icons/kingdom.jpg" alt="The Lost Kingdom">
+            <h3>The Lost Kingdom</h3>
+          </a>
+        </div>
+        <div class="story-card animate__animated animate__zoomIn" data-title="Moonlit Prophecy">
+          <a href="fantasy/story5.html">
+            <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=400&q=80"
+              alt="Moonlit Prophecy">
+            <h3>Moonlit Prophecy</h3>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 ACE CODERS. All rights reserved.</p>
+  </footer>
+
+  <!-- External JavaScript -->
+  <script src="script.js"></script>
+</body>
+
+</html>
